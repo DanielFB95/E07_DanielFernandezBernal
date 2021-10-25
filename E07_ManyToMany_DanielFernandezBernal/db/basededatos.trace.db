@@ -1,0 +1,250 @@
+2021-10-25 17:32:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table added_to (playlist_id bigint not null, song_id bigint not null, add_time timestamp, order integer, primary key (playlist_id, song_id)) [42001-200]
+2021-10-25 17:32:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FKl8srshxx8gl1x48e6qy5e22qy foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 17:32:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FK8bkiut1d6qcnl489nivvtp58p foreign key (song_id) references song [42102-200]
+2021-10-25 17:34:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ADDED_TO (ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ADDED_TO (ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table added_to (add_time timestamp, order integer, playlist_id bigint not null, song_id bigint not null, primary key (playlist_id, song_id)) [42001-200]
+2021-10-25 17:34:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FKl8srshxx8gl1x48e6qy5e22qy foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 17:34:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FK8bkiut1d6qcnl489nivvtp58p foreign key (song_id) references song [42102-200]
+2021-10-25 17:39:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table added_to (playlist_id bigint not null, song_id bigint not null, add_time timestamp, order integer, primary key (playlist_id, song_id)) [42001-200]
+2021-10-25 17:39:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FKl8srshxx8gl1x48e6qy5e22qy foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 17:39:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FK8bkiut1d6qcnl489nivvtp58p foreign key (song_id) references song [42102-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to drop foreign key FKl8srshxx8gl1x48e6qy5e22qy [42102-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to drop foreign key FK8bkiut1d6qcnl489nivvtp58p [42102-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "ALTER TABLE SONG DROP FOREIGN[*] KEY FKA21FT97NJ7THWRP5D31XDAXR"; se esperaba "identifier"
+Syntax error in SQL statement "ALTER TABLE SONG DROP FOREIGN[*] KEY FKA21FT97NJ7THWRP5D31XDAXR"; expected "identifier"; SQL statement:
+alter table song drop foreign key FKa21ft97nj7thwrp5d31xdaxr [42001-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Imposible eliminar "ARTIST" debido a que "FKA21FT97NJ7THWRP5D31XDAXR" depende de él.
+Cannot drop "ARTIST" because "FKA21FT97NJ7THWRP5D31XDAXR" depends on it; SQL statement:
+drop table if exists artist [90107-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:576)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:98)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:124)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:228)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:375)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:359)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:241)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:154)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:126)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:112)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:145)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:73)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:318)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:468)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1259)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:338)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332)
+	at com.trianasalesianos.dam.E07_ManyToMany_DanielFernandezBernal.E07ManyToManyDanielFernandezBernalApplication.main(E07ManyToManyDanielFernandezBernalApplication.java:10)
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME DATETIME, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID)) ENGINE=INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME DATETIME, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID)) ENGINE=INNODB"; expected "identifier"; SQL statement:
+create table added_to (playlist_id bigint not null, song_id bigint not null, add_time datetime, order integer, primary key (playlist_id, song_id)) engine=InnoDB [42001-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ARTIST (ID BIGINT NOT NULL, NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ARTIST (ID BIGINT NOT NULL, NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table artist (id bigint not null, name varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "HIBERNATE_SEQUENCE" no encontrada
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE PLAYLIST (ID BIGINT NOT NULL, DESCRIPTION VARCHAR(255), NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE PLAYLIST (ID BIGINT NOT NULL, DESCRIPTION VARCHAR(255), NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table playlist (id bigint not null, description varchar(255), name varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SONG (ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITLE VARCHAR(255), YEAR INTEGER, ARTIST_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE SONG (ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITLE VARCHAR(255), YEAR INTEGER, ARTIST_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table song (id bigint not null, album varchar(255), title varchar(255), year integer, artist_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FKl8srshxx8gl1x48e6qy5e22qy foreign key (playlist_id) references playlist (id) [42102-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FK8bkiut1d6qcnl489nivvtp58p foreign key (song_id) references song (id) [42102-200]
+2021-10-25 17:52:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FKa21ft97nj7thwrp5d31xdaxr foreign key (artist_id) references artist (id) [42102-200]
+2021-10-25 17:52:09 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "HIBERNATE_SEQUENCE" no encontrada
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+select next_val as id_val from hibernate_sequence for update [42102-200]
+2021-10-25 17:52:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to drop foreign key FKl8srshxx8gl1x48e6qy5e22qy [42102-200]
+2021-10-25 17:52:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to drop foreign key FK8bkiut1d6qcnl489nivvtp58p [42102-200]
+2021-10-25 17:52:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song drop foreign key FKa21ft97nj7thwrp5d31xdaxr [42102-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to drop foreign key FKl8srshxx8gl1x48e6qy5e22qy [42102-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to drop foreign key FK8bkiut1d6qcnl489nivvtp58p [42102-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song drop foreign key FKa21ft97nj7thwrp5d31xdaxr [42102-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME DATETIME, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID)) ENGINE=INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME DATETIME, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID)) ENGINE=INNODB"; expected "identifier"; SQL statement:
+create table added_to (playlist_id bigint not null, song_id bigint not null, add_time datetime, order integer, primary key (playlist_id, song_id)) engine=InnoDB [42001-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ARTIST (ID BIGINT NOT NULL, NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ARTIST (ID BIGINT NOT NULL, NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table artist (id bigint not null, name varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE HIBERNATE_SEQUENCE (NEXT_VAL BIGINT) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table hibernate_sequence (next_val bigint) engine=InnoDB [42001-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "HIBERNATE_SEQUENCE" no encontrada
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+insert into hibernate_sequence values ( 1 ) [42102-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE PLAYLIST (ID BIGINT NOT NULL, DESCRIPTION VARCHAR(255), NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE PLAYLIST (ID BIGINT NOT NULL, DESCRIPTION VARCHAR(255), NAME VARCHAR(255), PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table playlist (id bigint not null, description varchar(255), name varchar(255), primary key (id)) engine=InnoDB [42001-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE SONG (ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITLE VARCHAR(255), YEAR INTEGER, ARTIST_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE SONG (ID BIGINT NOT NULL, ALBUM VARCHAR(255), TITLE VARCHAR(255), YEAR INTEGER, ARTIST_ID BIGINT, PRIMARY KEY (ID)) ENGINE=[*]INNODB"; expected "identifier"; SQL statement:
+create table song (id bigint not null, album varchar(255), title varchar(255), year integer, artist_id bigint, primary key (id)) engine=InnoDB [42001-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FKl8srshxx8gl1x48e6qy5e22qy foreign key (playlist_id) references playlist (id) [42102-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FK8bkiut1d6qcnl489nivvtp58p foreign key (song_id) references song (id) [42102-200]
+2021-10-25 17:52:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song add constraint FKa21ft97nj7thwrp5d31xdaxr foreign key (artist_id) references artist (id) [42102-200]
+2021-10-25 17:53:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "HIBERNATE_SEQUENCE" no encontrada
+Table "HIBERNATE_SEQUENCE" not found; SQL statement:
+select next_val as id_val from hibernate_sequence for update [42102-200]
+2021-10-25 17:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to drop foreign key FKl8srshxx8gl1x48e6qy5e22qy [42102-200]
+2021-10-25 17:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to drop foreign key FK8bkiut1d6qcnl489nivvtp58p [42102-200]
+2021-10-25 17:53:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "SONG" no encontrada
+Table "SONG" not found; SQL statement:
+alter table song drop foreign key FKa21ft97nj7thwrp5d31xdaxr [42102-200]
+2021-10-25 17:53:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table added_to (playlist_id bigint not null, song_id bigint not null, add_time timestamp, order integer, primary key (playlist_id, song_id)) [42001-200]
+2021-10-25 17:53:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FKl8srshxx8gl1x48e6qy5e22qy foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 17:53:27 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FK8bkiut1d6qcnl489nivvtp58p foreign key (song_id) references song [42102-200]
+2021-10-25 17:55:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table added_to (playlist_id bigint not null, song_id bigint not null, add_time timestamp, order integer, primary key (playlist_id, song_id)) [42001-200]
+2021-10-25 17:55:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FKl8srshxx8gl1x48e6qy5e22qy foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 17:55:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FK8bkiut1d6qcnl489nivvtp58p foreign key (song_id) references song [42102-200]
+2021-10-25 17:57:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; se esperaba "identifier"
+Syntax error in SQL statement "CREATE TABLE ADDED_TO (PLAYLIST_ID BIGINT NOT NULL, SONG_ID BIGINT NOT NULL, ADD_TIME TIMESTAMP, ORDER[*] INTEGER, PRIMARY KEY (PLAYLIST_ID, SONG_ID))"; expected "identifier"; SQL statement:
+create table added_to (playlist_id bigint not null, song_id bigint not null, add_time timestamp, order integer, primary key (playlist_id, song_id)) [42001-200]
+2021-10-25 17:57:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FKl8srshxx8gl1x48e6qy5e22qy foreign key (playlist_id) references playlist [42102-200]
+2021-10-25 17:57:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "ADDED_TO" no encontrada
+Table "ADDED_TO" not found; SQL statement:
+alter table added_to add constraint FK8bkiut1d6qcnl489nivvtp58p foreign key (song_id) references song [42102-200]
